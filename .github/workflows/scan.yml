@@ -1,0 +1,61 @@
+name: scanner
+
+on:
+  schedule:
+    - cron: "3,33 * * * *"        # кожні 30 хв: о :03 і :33 (запас після закриття свічок 30m/1h/4h)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "selftest = перевірка підключень · dryrun = показати останні 6 свічок (без Telegram) · sendlast = те саме, але надіслати в Telegram · run = звичайний запуск"
+        type: choice
+        options: [selftest, dryrun, sendlast, run]
+        default: selftest
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scan
+        env:
+          MODE: ${{ inputs.mode }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          # --- необов'язкові налаштування: Settings → Secrets and variables → Actions → Variables ---
+          DEPOSIT: ${{ secrets.DEPOSIT || vars.DEPOSIT }}
+          RISK_PCT: ${{ vars.RISK_PCT }}
+          MAX_POS_PCT: ${{ vars.MAX_POS_PCT }}
+          TOP_N: ${{ vars.TOP_N }}
+          TFS: ${{ vars.TFS }}
+          SOURCES: ${{ vars.SOURCES }}
+          TV_EXCHANGE: ${{ vars.TV_EXCHANGE }}
+          IMP_G3: ${{ vars.IMP_G3 }}
+          IMP_G6: ${{ vars.IMP_G6 }}
+          IMP_ER: ${{ vars.IMP_ER }}
+          IMP_MIN_PCT_30M: ${{ vars.IMP_MIN_PCT_30M }}
+          IMP_MIN_PCT_1H: ${{ vars.IMP_MIN_PCT_1H }}
+          IMP_MIN_PCT_4H: ${{ vars.IMP_MIN_PCT_4H }}
+          IMP_TOP: ${{ vars.IMP_TOP }}
+          SIGNALS: ${{ vars.SIGNALS }}
+          SHOW_NEAR: ${{ vars.SHOW_NEAR }}
+          SHOW_BLOCKED: ${{ vars.SHOW_BLOCKED }}
+          TZ_NAME: ${{ vars.TZ_NAME }}
+        run: |
+          case "$MODE" in
+            selftest) python scanner.py --selftest ;;
+            dryrun)   python scanner.py --dry-run --all-tfs --lookback 6 ;;
+            sendlast) python scanner.py --all-tfs --lookback 6 ;;
+            *)        python scanner.py ;;
+          esac
