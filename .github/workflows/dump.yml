@@ -1,0 +1,52 @@
+name: dump-data
+
+# Одноразове (або періодичне) вивантаження історії свічок 1D і 4h по списку монет у гілку `data` цього репозиторію.
+# Запуск: Actions → dump-data → Run workflow. Секрети не потрібні.
+on:
+  workflow_dispatch:
+    inputs:
+      coins:
+        description: "Монети через пробіл (порожньо = стандартні 23: BTC HBAR RUNE AVAX XLM INJ ONDO RAY SUI ICP GRASS ENA TIA TEL RENDER BCH COMP SEI FET THETA NEAR FIL EGLD)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dump-data
+  cancel-in-progress: false
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dump candles
+        env:
+          COINS: ${{ inputs.coins }}
+        run: python dump_data.py out
+      # резервний шлях: якщо push у гілку не вийде — архів можна завантажити зі сторінки запуску (Artifacts)
+      - name: Upload archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candles
+          path: out
+          retention-days: 14
+      - name: Publish to branch data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd out
+          git init -q -b data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "candles $(date -u +%F)"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin data
