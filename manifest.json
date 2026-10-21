@@ -1,0 +1,375 @@
+{
+ "BTC": {
+  "1d": {
+   "n": 2485,
+   "first": 1577836800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "BTCUSDT"
+  },
+  "4h": {
+   "n": 8338,
+   "first": 1672531200000,
+   "last": 1792584000000,
+   "src": "binance",
+   "sym": "BTCUSDT"
+  }
+ },
+ "HBAR": {
+  "1d": {
+   "n": 2485,
+   "first": 1577836800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "HBARUSDT"
+  },
+  "4h": {
+   "n": 8338,
+   "first": 1672531200000,
+   "last": 1792584000000,
+   "src": "binance",
+   "sym": "HBARUSDT"
+  }
+ },
+ "RUNE": {
+  "1d": {
+   "n": 2238,
+   "first": 1599177600000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "RUNEUSDT"
+  },
+  "4h": {
+   "n": 8338,
+   "first": 1672531200000,
+   "last": 1792584000000,
+   "src": "binance",
+   "sym": "RUNEUSDT"
+  }
+ },
+ "AVAX": {
+  "1d": {
+   "n": 2220,
+   "first": 1600732800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "AVAXUSDT"
+  },
+  "4h": {
+   "n": 8338,
+   "first": 1672531200000,
+   "last": 1792584000000,
+   "src": "binance",
+   "sym": "AVAXUSDT"
+  }
+ },
+ "XLM": {
+  "1d": {
+   "n": 2485,
+   "first": 1577836800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "XLMUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "XLMUSDT"
+  }
+ },
+ "INJ": {
+  "1d": {
+   "n": 2191,
+   "first": 1603238400000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "INJUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "INJUSDT"
+  }
+ },
+ "ONDO": {
+  "1d": {
+   "n": 558,
+   "first": 1744329600000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "ONDOUSDT"
+  },
+  "4h": {
+   "n": 3350,
+   "first": 1744372800000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "ONDOUSDT"
+  }
+ },
+ "RAY": {
+  "1d": {
+   "n": 1898,
+   "first": 1628553600000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "RAYUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "RAYUSDT"
+  }
+ },
+ "SUI": {
+  "1d": {
+   "n": 1267,
+   "first": 1683072000000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "SUIUSDT"
+  },
+  "4h": {
+   "n": 7604,
+   "first": 1683115200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "SUIUSDT"
+  }
+ },
+ "ICP": {
+  "1d": {
+   "n": 1989,
+   "first": 1620691200000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "ICPUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "ICPUSDT"
+  }
+ },
+ "GRASS": {
+  "1d": {
+   "n": 499,
+   "first": 1749427200000,
+   "last": 1792454400000,
+   "src": "mexc",
+   "sym": "GRASSUSDT"
+  },
+  "4h": {
+   "n": 499,
+   "first": 1785427200000,
+   "last": 1792598400000,
+   "src": "mexc",
+   "sym": "GRASSUSDT"
+  }
+ },
+ "ENA": {
+  "1d": {
+   "n": 932,
+   "first": 1712016000000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "ENAUSDT"
+  },
+  "4h": {
+   "n": 5595,
+   "first": 1712044800000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "ENAUSDT"
+  }
+ },
+ "TIA": {
+  "1d": {
+   "n": 1086,
+   "first": 1698710400000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "TIAUSDT"
+  },
+  "4h": {
+   "n": 6517,
+   "first": 1698768000000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "TIAUSDT"
+  }
+ },
+ "TEL": {
+  "1d": {
+   "n": 499,
+   "first": 1749427200000,
+   "last": 1792454400000,
+   "src": "mexc",
+   "sym": "TELUSDT"
+  },
+  "4h": {
+   "n": 499,
+   "first": 1785427200000,
+   "last": 1792598400000,
+   "src": "mexc",
+   "sym": "TELUSDT"
+  }
+ },
+ "RENDER": {
+  "1d": {
+   "n": 1786,
+   "first": 1637971200000,
+   "last": 1792454400000,
+   "src": "binance+RNDRUSDT",
+   "sym": "RENDERUSDT"
+  },
+  "4h": {
+   "n": 8314,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance+RNDRUSDT",
+   "sym": "RENDERUSDT"
+  }
+ },
+ "BCH": {
+  "1d": {
+   "n": 2485,
+   "first": 1577836800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "BCHUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "BCHUSDT"
+  }
+ },
+ "COMP": {
+  "1d": {
+   "n": 2309,
+   "first": 1593043200000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "COMPUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "COMPUSDT"
+  }
+ },
+ "SEI": {
+  "1d": {
+   "n": 1163,
+   "first": 1692057600000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "SEIUSDT"
+  },
+  "4h": {
+   "n": 6980,
+   "first": 1692100800000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "SEIUSDT"
+  }
+ },
+ "FET": {
+  "1d": {
+   "n": 2485,
+   "first": 1577836800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "FETUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "FETUSDT"
+  }
+ },
+ "THETA": {
+  "1d": {
+   "n": 2485,
+   "first": 1577836800000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "THETAUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "THETAUSDT"
+  }
+ },
+ "NEAR": {
+  "1d": {
+   "n": 2198,
+   "first": 1602633600000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "NEARUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "NEARUSDT"
+  }
+ },
+ "FIL": {
+  "1d": {
+   "n": 2197,
+   "first": 1602720000000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "FILUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "FILUSDT"
+  }
+ },
+ "EGLD": {
+  "1d": {
+   "n": 2239,
+   "first": 1599091200000,
+   "last": 1792454400000,
+   "src": "binance",
+   "sym": "EGLDUSDT"
+  },
+  "4h": {
+   "n": 8339,
+   "first": 1672531200000,
+   "last": 1792598400000,
+   "src": "binance",
+   "sym": "EGLDUSDT"
+  }
+ },
+ "_meta": {
+  "made_utc": "2026-10-21 20:03:19",
+  "fng_rows": 3181,
+  "mock": false
+ }
+}
