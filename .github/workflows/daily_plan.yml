@@ -1,0 +1,55 @@
+name: daily-plan
+
+# Щоденний план: після закриття денної свічки (00:00 UTC) рахує режим ринку, стан кожної монети зі списку,
+# конкретні рівні входу/стопу і надсилає звіт + графіки в Telegram.
+# Налаштування: plan_config.json (монети, капітал, «фокус»), positions.json (твої позиції).
+on:
+  schedule:
+    - cron: "12 0 * * *"          # 00:12 UTC щодня
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "send = надіслати в Telegram · dry = лише порахувати (текст і графіки — у Artifacts запуску)"
+        type: choice
+        options: [send, dry]
+        default: send
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-plan
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install numpy matplotlib
+      - name: Plan
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DEPOSIT: ${{ secrets.DEPOSIT || vars.DEPOSIT }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          mkdir -p plan_out
+          if [ "$MODE" = "dry" ]; then
+            python daily_plan.py --dry --out plan_out
+          else
+            python daily_plan.py --out plan_out
+          fi
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plan
+          path: plan_out
+          retention-days: 7
+          if-no-files-found: ignore
