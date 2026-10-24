@@ -1,0 +1,37 @@
+{
+ "_README": "coins — список монет (BTC обов'язково показується окремо). capital_usdt — гроші, виділені під систему (1 слот = капітал / кількість альтів). focus — монети, які хочеш бачити детально щодня. charts/max_charts — графіки в Telegram. send_when_no_changes — слати щодня навіть без нових сигналів.",
+ "coins": [
+  "BTC",
+  "HBAR",
+  "RUNE",
+  "AVAX",
+  "XLM",
+  "INJ",
+  "ONDO",
+  "RAY",
+  "SUI",
+  "ICP",
+  "GRASS",
+  "ENA",
+  "TIA",
+  "TEL",
+  "RENDER",
+  "BCH",
+  "COMP",
+  "SEI",
+  "FET",
+  "THETA",
+  "NEAR",
+  "FIL",
+  "EGLD"
+ ],
+ "capital_usdt": 1000,
+ "focus": [
+  "ENA",
+  "TIA",
+  "INJ"
+ ],
+ "charts": true,
+ "max_charts": 6,
+ "send_when_no_changes": true
+}
