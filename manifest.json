@@ -1,0 +1,466 @@
+{
+"XLM": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"XLMUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"XLMUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"INJ": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"INJUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"INJUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"BTC": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"BTCUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"BTCUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"AVAX": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"AVAXUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"AVAXUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"RUNE": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"RUNEUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"RUNEUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"HBAR": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"HBARUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"HBARUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"ONDO": {
+"1h": {
+"first": 1744380000000,
+"last": 1792882800000,
+"n": 13474,
+"symbols": [
+"ONDOUSDT"
+],
+"files": 18,
+"tail": "api"
+},
+"30m": {
+"first": 1744380000000,
+"last": 1792884600000,
+"n": 26948,
+"symbols": [
+"ONDOUSDT"
+],
+"files": 18,
+"tail": "api"
+}
+},
+"ENA": {
+"1h": {
+"first": 1712044800000,
+"last": 1792882800000,
+"n": 22456,
+"symbols": [
+"ENAUSDT"
+],
+"files": 30,
+"tail": "api"
+},
+"30m": {
+"first": 1712044800000,
+"last": 1792884600000,
+"n": 44912,
+"symbols": [
+"ENAUSDT"
+],
+"files": 30,
+"tail": "api"
+}
+},
+"SUI": {
+"1h": {
+"first": 1683115200000,
+"last": 1792882800000,
+"n": 30492,
+"symbols": [
+"SUIUSDT"
+],
+"files": 41,
+"tail": "api"
+},
+"30m": {
+"first": 1683115200000,
+"last": 1792884600000,
+"n": 60984,
+"symbols": [
+"SUIUSDT"
+],
+"files": 41,
+"tail": "api"
+}
+},
+"TIA": {
+"1h": {
+"first": 1698768000000,
+"last": 1792882800000,
+"n": 26144,
+"symbols": [
+"TIAUSDT"
+],
+"files": 36,
+"tail": "api"
+},
+"30m": {
+"first": 1698768000000,
+"last": 1792884600000,
+"n": 52288,
+"symbols": [
+"TIAUSDT"
+],
+"files": 36,
+"tail": "api"
+}
+},
+"RAY": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"RAYUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"RAYUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"ICP": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"ICPUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"ICPUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"RENDER": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42090,
+"symbols": [
+"RNDRUSDT",
+"RENDERUSDT"
+],
+"files": 27,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84180,
+"symbols": [
+"RNDRUSDT",
+"RENDERUSDT"
+],
+"files": 27,
+"tail": "api"
+}
+},
+"SEI": {
+"1h": {
+"first": 1692100800000,
+"last": 1792882800000,
+"n": 27996,
+"symbols": [
+"SEIUSDT"
+],
+"files": 38,
+"tail": "api"
+},
+"30m": {
+"first": 1692100800000,
+"last": 1792884600000,
+"n": 55992,
+"symbols": [
+"SEIUSDT"
+],
+"files": 38,
+"tail": "api"
+}
+},
+"BCH": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"BCHUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"BCHUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"COMP": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"COMPUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"COMPUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"FET": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"FETUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"FETUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"THETA": {
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"THETAUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"THETAUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"NEAR": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"NEARUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"NEARUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"FIL": {
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"FILUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"FILUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+},
+"EGLD": {
+"1h": {
+"first": 1640995200000,
+"last": 1792882800000,
+"n": 42191,
+"symbols": [
+"EGLDUSDT"
+],
+"files": 57,
+"tail": "api"
+},
+"30m": {
+"first": 1640995200000,
+"last": 1792884600000,
+"n": 84382,
+"symbols": [
+"EGLDUSDT"
+],
+"files": 57,
+"tail": "api"
+}
+}
+}
