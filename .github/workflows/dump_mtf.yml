@@ -1,0 +1,59 @@
+name: dump-mtf
+
+# Вивантаження свічок 30m і 1h для 23 монет Влада (Binance spot) з 2022 року — для тесту перетинів EMA.
+# Потрібні файли dump_wide.py і dump_mtf.py у корені репозиторію. Результат — у гілку `mtf` (+ архів у Artifacts). Секрети не потрібні.
+# Запуск: Actions → dump-mtf → Run workflow. Триває ≈ 3–10 хвилин.
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "З якого місяця брати свічки (РРРР-ММ)"
+        required: false
+        default: "2022-01"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dump-mtf
+  cancel-in-progress: false
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install numpy
+      - name: Dump candles
+        env:
+          START: ${{ inputs.start }}
+        run: python dump_mtf.py out_mtf
+      - name: Size
+        if: always()
+        run: du -sh out_mtf out_mtf/m30 out_mtf/h1 2>/dev/null || true
+      - name: Upload archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mtf
+          path: out_mtf
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Publish to branch mtf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd out_mtf
+          git init -q -b mtf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config http.postBuffer 524288000
+          git add -A
+          git commit -qm "mtf candles $(date -u +%F)"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin mtf
