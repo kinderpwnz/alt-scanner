@@ -1,0 +1,64 @@
+name: dump-wide
+
+# Вивантаження свічок УСІХ USDT-пар Binance spot (з делістнутими): 4h — уся історія, 1h — ліквідні від 2023.
+# Результат — у гілку `wide` цього репозиторію (+ архів у Artifacts запуску). Секрети не потрібні.
+# Запуск: Actions → dump-wide → Run workflow. Триває ≈ 10–30 хвилин.
+on:
+  workflow_dispatch:
+    inputs:
+      top1h:
+        description: "Скільки найліквідніших монет брати для 1h (за 30-денним обсягом, у будь-який тиждень від старту)"
+        required: false
+        default: "150"
+      start1h:
+        description: "З якого місяця брати 1h (РРРР-ММ)"
+        required: false
+        default: "2023-01"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dump-wide
+  cancel-in-progress: false
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install numpy
+      - name: Dump candles
+        env:
+          TOP1H: ${{ inputs.top1h }}
+          START1H: ${{ inputs.start1h }}
+        run: python dump_wide.py out
+      - name: Size
+        if: always()
+        run: du -sh out out/h4 out/h1 2>/dev/null || true
+      - name: Upload archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wide
+          path: out
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Publish to branch wide
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd out
+          git init -q -b wide
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config http.postBuffer 524288000
+          git add -A
+          git commit -qm "wide candles $(date -u +%F)"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -f origin wide
