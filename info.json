@@ -1,0 +1,25 @@
+{
+ "made_utc": "2026-10-25T23:32:46",
+ "symbols_4h": 681,
+ "symbols_1h": 549,
+ "errors": 6,
+ "last_bar_4h": "2026-10-24 20:00",
+ "rows_4h": 4814180,
+ "rows_1h": 12164146,
+ "tail_api": 906,
+ "tail_daily": 0,
+ "tail_none": 0,
+ "http": 45109,
+ "failed_requests": 2,
+ "seconds": 638,
+ "error_examples": {
+  "4h:USDSOLDUSDT": "порожньо",
+  "4h:币安人生USDT": "https://data.binance.vision/data/spot/monthly/klines/币安人生USDT/4h/币安人生USDT-4h-2026-01.zip: 'ascii' codec can't encode characters in position 30-33: ordinal not in range(128)",
+  "4h:牛来USDT": "https://data.binance.vision/data/spot/monthly/klines/牛来USDT/4h/牛来USDT-4h-2026-09.zip: 'ascii' codec can't encode characters in position 30-31: ordinal not in range(128)",
+  "1h:ANCUSDT": "порожньо",
+  "1h:MITHUSDT": "порожньо",
+  "1h:TORNUSDT": "порожньо"
+ },
+ "top1h": 150,
+ "start1h": "2023-01"
+}
